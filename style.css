@@ -45,14 +45,24 @@
     --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
     --font-size-lg: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
     --font-size-h4: clamp(1.25rem, 1.1rem + 0.7vw, 1.5rem);
-    --font-size-h3: clamp(1.5rem, 1.25rem + 1.2vw, 2rem);
-    --font-size-h2: clamp(1.75rem, 1.3rem + 2vw, 2.5rem);
-    --font-size-h1: clamp(2.25rem, 1.5rem + 3.5vw, 3.5rem);
-    --font-size-hero: clamp(2.5rem, 1.5rem + 5vw, 5rem);
+    --font-size-h3: clamp(1.75rem, 1.5rem + 1.8vw, 2.5rem);
+    --font-size-h2: clamp(2.25rem, 1.325rem + 2vw, 3rem);
+    --font-size-h1: clamp(2.5rem, 1.5rem + 5vw, 5rem);
 
     --primary-color: #F2F1EC;
     --secondary-color: #c9c9c9;
     --accent-color: #1140d8;
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+h4 { font-size: var(--font-size-h4); }
+
+h1, h2, h3, h4{
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 body{
@@ -60,11 +70,6 @@ body{
     font-size: var(--font-size-base);
     margin: 0;
 }
-
-h1 { font-size: var(--font-size-h1); }
-h2 { font-size: var(--font-size-h2); }
-h3 { font-size: var(--font-size-h3); }
-h4 { font-size: var(--font-size-h4); }
 
 .hero{
     background-color: var(--primary-color);
@@ -90,11 +95,7 @@ h4 { font-size: var(--font-size-h4); }
 }
 
 .hero-info h1{
-    font-size: var(--font-size-hero);
-    font-weight: 500;
-    text-transform: uppercase;
     margin-bottom: 2rem;
-    letter-spacing: 0.2rem;
 }
 
 .hero-bild{
@@ -119,7 +120,6 @@ h4 { font-size: var(--font-size-h4); }
 
 .hero-details p{
     margin: 0;
-    
 }
 
 .pill{
@@ -136,16 +136,14 @@ h4 { font-size: var(--font-size-h4); }
 .intro{
     display: flex;
     align-items: center;
+    margin: 2rem 0;
 }
 
-.container-intro{
-    height: 100vh;
-}
-
-.container-intro h2{
+.intro-headline{
+    font-size: var(--font-size-h2);
     text-transform: uppercase;
-    font-weight: 500;
-    padding-bottom: var(--space-sm);
+    line-height: 1;
+    padding-bottom: 1.5rem;
 }
 
 .intro-karten{
@@ -159,11 +157,6 @@ h4 { font-size: var(--font-size-h4); }
     padding: 1.5rem;
 }
 
-.intro-karte h3{
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
 .skills{
     display: flex;
     gap: 0.5rem;
@@ -173,6 +166,60 @@ h4 { font-size: var(--font-size-h4); }
 .blau{
     background-color: var(--accent-color);
     color: #fff;
+}
+
+.weiß{
+    background-color: #fff;
+    color: var(--accent-color);
+}
+
+.werdegang{
+    background-color: var(--primary-color);
+}
+
+.container-werdegang{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.werdegang-details h3{
+    margin-bottom: 0;
+}
+
+.werdegang-details p{
+    margin-top: 0;
+}
+
+.werdegang-details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.werdegang-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+hr{
+    width: 100%;
+    border: none;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+
+
+
+
+.blog{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
 }
 
 
