@@ -1,43 +1,17 @@
 @font-face {
-    font-family: "DM Mono";
-    src: url("assets/fonts/DMMono-Light.ttf") format("truetype");
-    font-weight: 300;
+    font-family: "Hanken Grotesk";
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.woff2) format("truetype");
+    font-weight: 100 900;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "DM Mono";
-    src: url("assets/fonts/DMMono-LightItalic.ttf") format("truetype");
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "DM Mono";
-    src: url("assets/fonts/DMMono-Regular.ttf") format("truetype");
-    font-weight: 400;
+    font-family: "Inter";
+    src: url(assets/fonts/Inter-VariableFont_opsz\,wght.woff2) format("truetype");
+    font-weight: 100 900;
     font-style: normal;
-}
-
-@font-face {
-    font-family: "DM Mono";
-    src: url("assets/fonts/DMMono-Italic.ttf") format("truetype");
-    font-weight: 400;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "DM Mono";
-    src: url("assets/fonts/DMMono-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "DM Mono";
-    src: url("assets/fonts/DMMono-MediumItalic.ttf") format("truetype");
-    font-weight: 500;
-    font-style: italic;
+    font-display: swap;
 }
 
 :root {
@@ -60,22 +34,24 @@ h3 { font-size: var(--font-size-h3); }
 h4 { font-size: var(--font-size-h4); }
 
 h1, h2, h3, h4{
-    font-family: "DM Mono", monospace;
-    font-weight: 500;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 600;
     text-transform: uppercase;
+    line-height: 1.05;
 }
 
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: var(--font-size-base);
+    color: #202020;
     margin: 0;
 }
 
 .hero{
     background-color: var(--primary-color);
-    height: 80vh;
     display: flex;
     align-items: center;
+    padding-bottom: 5rem;
 }
 
 .container{
@@ -95,7 +71,13 @@ body{
 }
 
 .hero-info h1{
+    font-size: clamp(3rem, 2rem + 6vw, 7rem);
+    font-weight: 800;
     margin-bottom: 2rem;
+}
+
+.hero-name{
+    color: var(--accent-color);
 }
 
 .hero-bild{
@@ -114,12 +96,17 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    font-size: var(--font-size-lg);
     gap: 20px;
-    padding: 0 100px 0 0;
 }
 
 .hero-details p{
     margin: 0;
+}
+
+.hero-pills{
+    display: flex;
+    gap: 1rem;
 }
 
 .pill{
@@ -136,7 +123,7 @@ body{
 .intro{
     display: flex;
     align-items: center;
-    margin: 2rem 0;
+    padding: 2rem 0 5rem 0;
 }
 
 .intro-headline{
@@ -175,51 +162,70 @@ body{
 
 .werdegang{
     background-color: var(--primary-color);
+    padding: 2rem 0 5rem 0;
 }
 
 .container-werdegang{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: clamp(3rem, 8vw, 10rem);
+    align-items: start;
+    padding-block: 4rem;
 }
 
-.werdegang-details h3{
-    margin-bottom: 0;
-}
-
-.werdegang-details p{
+.container-werdegang h2{
     margin-top: 0;
 }
 
 .werdegang-details{
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0;
+    min-width: 0;
 }
 
 .werdegang-detail{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    align-items: start;
+    gap: 2rem;
+    padding-block: 1.5rem;
+    border-top: 3px solid var(--secondary-color);
 }
 
-hr{
-    width: 100%;
-    border: none;
-    height: 3px;
-    background-color: var(--secondary-color);
+.werdegang-detail > div{
+    min-width: 0;
 }
 
+.werdegang-detail h4{
+    margin: 0 0 0.5rem;
+    overflow-wrap: anywhere;
+}
 
-
-
+.werdegang-detail p{
+    margin: 0;
+}
 
 .blog{
     display: flex;
     align-items: center;
-    margin: 2rem 0;
+    padding: 2rem 0 5rem 0;
+}
+
+.blog-karten{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+}
+
+.blog-karten a{
+    text-decoration: none;
+}
+
+.blog-karte{
+    background-color: var(--accent-color);
+    color: white;
+    padding: 1.5rem;
 }
 
 
@@ -233,5 +239,23 @@ hr{
 
 
 @media (max-width: 920px) {
+    .container-hero{
+        flex-direction: column;
+        gap: 5rem;
+    }
+    .hero{
+        height: auto;
+        padding-block: 3rem;
+    }
+    .container-werdegang{
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
+    }
+}
 
+@media (max-width: 600px) {
+    .werdegang-detail{
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
 }
