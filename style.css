@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Hanken Grotesk";
-    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.woff2) format("truetype");
+    src: url(assets/fonts/HankenGrotesk-Variable.woff2) format("woff2");
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: "Inter";
-    src: url(assets/fonts/Inter-VariableFont_opsz\,wght.woff2) format("truetype");
+    src: url(assets/fonts/Inter-Variable.woff2) format("woff2");
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
@@ -55,7 +55,6 @@ body{
 }
 
 .container{
-    width: 100%;
     max-width: 1480px;
     margin-inline: auto;
     padding-inline: 1.5rem;
@@ -121,8 +120,6 @@ body{
 }
 
 .intro{
-    display: flex;
-    align-items: center;
     padding: 2rem 0 5rem 0;
 }
 
@@ -207,8 +204,6 @@ body{
 }
 
 .blog{
-    display: flex;
-    align-items: center;
     padding: 2rem 0 5rem 0;
 }
 
@@ -226,6 +221,33 @@ body{
     background-color: var(--accent-color);
     color: white;
     padding: 1.5rem;
+}
+
+footer{
+    background-color: #1140d8;
+    padding: 1.5rem 0;
+    font-size: var(--font-size-xs);
+    color: #fff;
+}
+
+.container-footer{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+footer a{
+    color: #fff;
+}
+
+footer p{
+    margin: 0;
+}
+
+.links{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 
@@ -250,6 +272,10 @@ body{
     .container-werdegang{
         grid-template-columns: minmax(0, 1fr);
         gap: 2rem;
+    }
+
+    footer{
+        flex-direction: column;
     }
 }
 
