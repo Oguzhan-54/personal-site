@@ -82,13 +82,14 @@ body{
 .hero-bild{
     display: flex;
     justify-content: center;
-    align-items: center;
     flex: 0 0 40%;
+    margin-top: 2rem;
 }
 
 .hero-bild img{
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    background-color: #1140d8;
+    padding: 1rem;
 }
 
 .hero-details{
