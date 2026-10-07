@@ -1,7 +1,7 @@
-# Diese Website wurde als Übung gebaut. Es wurde keine KI zur Hilfe genommen
-
 # Personal Site
 Meine persönliche Website mit Einblicken in meinen Job, meinen Werdegang und auch ein wenig privates
+
+## Diese Website wurde als Übung gebaut. Es wurde keine KI zur Hilfe genommen
 
 ## Inhalt
 - Hero
