@@ -15,4 +15,3 @@ Meine persönliche Website mit Einblicken in meinen Job, meinen Werdegang und au
 
 ## Kontakt
 - [LinkedIn](https://www.linkedin.com/in/oguzhan-aslan-76098b21b)
-- 
