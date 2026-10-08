@@ -3,6 +3,9 @@ Meine persönliche Website mit Einblicken in meinen Job, meinen Werdegang und au
 
 ## Diese Website wurde als Übung gebaut. Es wurde keine KI zur Hilfe genommen
 
+<img width="1614" height="896" alt="image" src="https://github.com/user-attachments/assets/1dbe4ab3-fbed-43b5-94c6-99261e4f535e" />
+
+
 ## Inhalt
 - Hero
 - Job und Hobbys
