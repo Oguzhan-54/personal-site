@@ -25,7 +25,7 @@
 
     --primary-color: #F2F1EC;
     --secondary-color: #c9c9c9;
-    --accent-color: #1140d8;
+    --accent-color: #030164;  /* #1140d8*/
 }
 
 h1 { font-size: var(--font-size-h1); }
@@ -88,7 +88,7 @@ body{
 
 .hero-bild img{
     width: 350px;
-    background-color: #1140d8;
+    background-color: var(--accent-color);
     padding: 1rem;
 }
 
@@ -225,7 +225,7 @@ body{
 }
 
 footer{
-    background-color: #1140d8;
+    background-color: var(--accent-color);
     padding: 1.5rem 0;
     font-size: var(--font-size-xs);
     color: #fff;
